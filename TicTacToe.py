@@ -68,5 +68,6 @@ while gameIsRunning:
     playerInput(board)
     checkWin(board)
     if winner != None:
+        printBoard(board)
         gameIsRunning = False
     switchPlayer()
