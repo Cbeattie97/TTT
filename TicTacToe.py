@@ -51,7 +51,6 @@ def checkWin(board):
         print ("Player " + winner + " Wins!!")
     if "_" not in board:
         print("The Game is a Tie!")
-    gameIsRunning = False
 # switch the player
 def switchPlayer():
     global currentPlayer
@@ -67,4 +66,6 @@ while gameIsRunning:
     printBoard(board)
     playerInput(board)
     checkWin(board)
+    if winner != None:
+        gameIsRunning = False
     switchPlayer()
