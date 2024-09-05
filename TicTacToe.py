@@ -13,6 +13,7 @@ def printBoard(board):
     print(board[3] + " | " + board[4] + " | " + board[5])
     print("---------")
     print(board[6] + " | " + board[7] + " | " + board[8])
+
 # take plaayer input
 def playerInput(board):
     inp = int(input("Enter the position from 1-9: "))
@@ -22,6 +23,7 @@ def playerInput(board):
         else:
             print("Position already taken")
             playerInput(board)
+
 # check for win or tie
 def checkWin(board):
     global winner
@@ -51,6 +53,7 @@ def checkWin(board):
         print ("Player " + winner + " Wins!!")
     if "_" not in board:
         print("The Game is a Tie!")
+
 # switch the player
 def switchPlayer():
     global currentPlayer
@@ -59,9 +62,7 @@ def switchPlayer():
     else:
         currentPlayer = "X"
 
-
 #  check for win or tie again 
-
 while gameIsRunning:
     printBoard(board)
     playerInput(board)
