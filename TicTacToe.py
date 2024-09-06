@@ -51,7 +51,8 @@ def checkWin(board):
     if board[2] == board[4] == board[6] and board[2] != "_":
         winner = board[2]
         print ("Player " + winner + " Wins!!")
-    if "_" not in board:
+def checkTie(board):
+    if not winner and "_" not in board:
         print("The Game is a Tie!")
 
 # switch the player
@@ -67,6 +68,7 @@ while gameIsRunning:
     printBoard(board)
     playerInput(board)
     checkWin(board)
+    checkTie(board)
     if winner != None:
         printBoard(board)
         gameIsRunning = False
